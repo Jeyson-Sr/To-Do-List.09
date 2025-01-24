@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, PlusCircle, HardHat } from 'lucide-react';
+import { Calendar, PlusCircle, ClipboardCheck } from 'lucide-react';
 
 interface TodoFormProps {
   onAdd: (text: string, priority: 'baja' | 'media' | 'alta', dueDate?: Date) => void;
@@ -30,8 +30,9 @@ export function TodoForm({ onAdd }: TodoFormProps) {
             onChange={(e) => setText(e.target.value)}
             placeholder="¡Agregar nueva tarea!"
             className="w-full px-4 py-3 rounded-lg border-2 border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 pl-12 bg-white shadow-lg"
+            required
           />
-          <HardHat className="absolute left-4 top-1/2 transform -translate-y-1/2 text-yellow-500" />
+          <ClipboardCheck className="absolute left-4 top-1/2 transform -translate-y-1/2 text-yellow-500" />
         </div>
         <button
           type="submit"

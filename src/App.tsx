@@ -4,7 +4,6 @@ import { TodoItem } from "./components/TodoItem";
 import { TodoStats } from "./components/TodoStats";
 import { TodoFilters } from "./components/TodoFilters";
 import { useTodos } from "./hooks/useTodos";
-// import { HardHat, Construction } from 'lucide-react';
 
 function App() {
   const { todos, addTodo, toggleTodo, deleteTodo, filter, setFilter, stats } =
@@ -15,12 +14,10 @@ function App() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="bg-white rounded-2xl shadow-2xl p-8 space-y-8">
           <div className="flex items-center gap-4 mb-8">
-            <div className="bg-yellow-500 p-3 rounded-xl shadow-lg">
-              {/* <Construction size={40} className="text-white" /> */}
-            </div>
+            <div className="bg-yellow-500 p-3 rounded-xl shadow-lg"></div>
             <div>
               <h1 className="text-4xl font-bold text-gray-800">
-                ¡LISTA DE TAREAS!
+              🗂️ ¡LISTA DE TAREAS!
               </h1>
               <p className="text-gray-600 text-lg">
                 Organiza tus proyectos de la mejor manera
@@ -49,7 +46,6 @@ function App() {
             ))}
             {todos.length === 0 && (
               <div className="text-center py-12 bg-gray-50 rounded-xl">
-                {/* <HardHat size={64} className="mx-auto text-yellow-500 mb-4" /> */}
                 <p className="text-xl text-gray-600">
                   ¡No hay tareas! ¡Comienza a construir tu lista!
                 </p>
